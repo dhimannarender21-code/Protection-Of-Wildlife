@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SpeciesGuard | Protect Our Wildlife</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <nav class="navbar">
+        <div class="logo">🌿 SpeciesGuard</div>
+        <ul class="nav-links">
+            <li><a href="#explore">Explore Species</a></li>
+            <li><a href="#report">Report Sighting</a></li>
+            <li><a href="#donate" class="btn-primary">How to Help</a></li>
+        </ul>
+    </nav>
+
+    <header class="hero">
+        <div class="hero-content">
+            <h1>Save Them Before They're Gone.</h1>
+            <p>Every 20 minutes, we lose another species. Follow our 3-step guide to take action today.</p>
+            <div class="hero-btns">
+                <a href="#explore" class="btn-main">View Red List</a>
+                <button onclick="toggleModal()" class="btn-secondary">New Here? Start Guide</button>
+            </div>
+        </div>
+    </header>
+
+    <section class="guided-steps">
+        <h2>How You Can Help</h2>
+        <div class="steps-container">
+            <div class="step-card">
+                <span class="step-num">1</span>
+                <h3>Identify</h3>
+                <p>Browse our database to learn which species are "Critically Endangered" in your region.</p>
+            </div>
+            <div class="step-card">
+                <span class="step-num">2</span>
+                <h3>Report</h3>
+                <p>If you see illegal wildlife trade or a rare sighting, use our secure reporting tool.</p>
+            </div>
+            <div class="step-card">
+                <span class="step-num">3</span>
+                <h3>Support</h3>
+                <p>Donate directly to vetted NGOs working on the ground for that specific animal.</p>
+            </div>
+        </div>
+    </section>
+
+    <main id="explore" class="species-section">
+        <div class="section-header">
+            <h2>Current Endangered List</h2>
+            <input type="text" placeholder="Search by animal or region..." id="searchBox">
+        </div>
+        <div id="speciesGrid" class="grid">
+            <article class="species-card">
+                <div class="status-badge cr">Critically Endangered</div>
+                <img src="https://via.placeholder.com/300x200" alt="Amur Leopard">
+                <div class="card-body">
+                    <h3>Amur Leopard</h3>
+                    <p>Remaining: <strong>~100 individuals</strong></p>
+                    <button class="btn-action">Take Action Now</button>
+                </div>
+            </article>
+        </div>
+    </main>
+
+    <div id="helpModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="toggleModal()">&times;</span>
+            <h2>Welcome to SpeciesGuard</h2>
+            <p>Our mission is to bridge the gap between information and action. To begin:</p>
+            <ul>
+                <li><strong>Red Badges:</strong> Mean the animal is at immediate risk of extinction.</li>
+                <li><strong>Action Buttons:</strong> Will take you to a verified donation or petition page.</li>
+            </ul>
+            <button onclick="toggleModal()" class="btn-primary">Got it, let's go!</button>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
+
+
